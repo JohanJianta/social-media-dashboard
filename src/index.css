@@ -1,0 +1,5 @@
+/* Set ukuran minimum body */
+body {
+  min-width: 100%;
+  min-height: 100vh;
+}
