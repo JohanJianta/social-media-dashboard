@@ -29,7 +29,7 @@ function App({ onChangeMode }) {
   return (
     <>
       {/* Background header di bagian atas */}
-      <Box width='100%' height='215px' bgcolor='primary.light' position='absolute' zIndex='-1' />
+      <Box width='100%' height='215px' bgcolor='primary.main' position='absolute' zIndex='-1' />
       <Stack paddingX={2} paddingY={3} spacing={5} maxWidth={{ xs: '1000px', lg: '1200px' }} justifyContent='center' margin='0 auto'>
         {/* Social Media */}
         <Box>
@@ -38,7 +38,7 @@ function App({ onChangeMode }) {
               <Typography variant='h5' color="text.primary"><Box component='span' fontWeight="bold">Social Media Dashboard</Box></Typography>
               <Typography variant='subtitle2' color="text.secondary"><Box component='span' fontWeight="bold">Total Followers: 23,004</Box></Typography>
             </Box>
-            <Box marginTop={2} marginBottom={1} display={{ xs: 'block', md: 'none' }}><Divider /></Box>
+            <Box marginTop={2} marginBottom={1} display={{ xs: 'block', md: 'none' }}><Divider sx={{ bgcolor: "text.secondary" }} /></Box>
             <Stack direction="row" justifyContent="space-between" alignItems="center">
               <Typography variant='subtitle2' color="text.secondary"><Box component='span' fontWeight="bold">Dark Mode</Box></Typography>
               <Switch defaultChecked onChange={() => onChangeMode()} />
@@ -47,7 +47,7 @@ function App({ onChangeMode }) {
           <Grid container columns={12} spacing={3} marginTop={{ xs: 0, md: 2 }} display="flex" justifyContent="center" alignItems="center">
             {/* {...data} merupakan spread syntax, dipakai untuk passing seluruh properti dari data secara individu ke dalam component */}
             {socialMediaData.map((data, index) => (
-              <Grid key={index} item xs={8} md={5} lg={3} style={{ maxWidth: '350px' }}>
+              <Grid key={index} item xs={12} md={5} lg={3} style={{ maxWidth: '350px' }}>
                 <CardMain {...data} />
               </Grid>
             ))}
@@ -59,7 +59,7 @@ function App({ onChangeMode }) {
           <Typography variant='h5' color="text.primary"><Box component='span' fontWeight="bold">Overview - Today</Box></Typography>
           <Grid container columns={12} spacing={3} marginTop={0} display="flex" justifyContent="center" alignItems="center">
             {overviewData.map((data, index) => (
-              <Grid key={index} item xs={8} md={5} lg={3} style={{ maxWidth: '350px' }}>
+              <Grid key={index} item xs={12} md={5} lg={3} style={{ maxWidth: '350px' }}>
                 <CardOverview {...data} />
               </Grid>
             ))}

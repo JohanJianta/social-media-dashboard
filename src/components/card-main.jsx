@@ -7,6 +7,7 @@ export default function CardMain({ icon, name, lineColor, follower, todayNum, is
     <Card variant='outlined' sx={{ border: 'none' }}>
       {/* Garis berwarna bagian atas card */}
       <Box component='div' sx={{ height: '4px', background: lineColor }} />
+
       <CardContent>
         {/* Bagian atas */}
         <Stack textAlign='center' spacing={2.5} marginTop={1.5}>
@@ -36,6 +37,7 @@ export default function CardMain({ icon, name, lineColor, follower, todayNum, is
           </Stack>
         </Stack>
       </CardContent>
+
     </Card>
   )
 }
